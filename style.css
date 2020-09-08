@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+form {
+    padding: 30px 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 2px solid #f0f0f0;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14;
+}
+.form-group small {
+    position: absolute;
+    color: var(--error-color);
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+}
+.form-group.error small {
+    visibility: visible;
+}
+
+.form-group.error input {
+    border-color: var(--error-color);
+}
+.form-group.success input {
+    border-color: var(--success-color);
+}
+
+.form button {
+    cursor: pointer;
+    display: block;
+    background-color: #3498db;
+    border-color: #3498db;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+}
